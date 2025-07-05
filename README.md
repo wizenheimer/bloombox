@@ -1,6 +1,12 @@
+<div align="center">
+
 # Bloombox
 
+![Bloombox Cover](assets/cover.png)
+
 A free, open-source email validation API made for Indie Hackers — no auth, no limits, no paywalls, no data stored. Just fast, accurate checks for syntax, domains, MX records, and throwaways. Refreshed daily.
+
+</div>
 
 ## Features
 

@@ -129,3 +129,30 @@ $(BUILD_DIR):
 	@mkdir -p $(BUILD_DIR)
 
 build: $(BUILD_DIR)
+
+help:
+	@echo "$(BLUE)"
+	@echo "██████  ██      ██████   ██████  ███    ███ ██████   ██████  ██   ██ "
+	@echo "██   ██ ██     ██    ██ ██    ██ ████  ████ ██   ██ ██    ██  ██ ██  "
+	@echo "██████  ██     ██    ██ ██    ██ ██ ████ ██ ██████  ██    ██   ███   "
+	@echo "██   ██ ██     ██    ██ ██    ██ ██  ██  ██ ██   ██ ██    ██  ██ ██  "
+	@echo "██████  ███████ ██████   ██████  ██      ██ ██████   ██████  ██   ██ "
+	@echo "$(NC)"
+	@echo "$(YELLOW)Available targets:$(NC)"
+	@echo "$(GREEN)  help           $(NC)Show this help message"
+	@echo "$(GREEN)  build          $(NC)Build the application"
+	@echo "$(GREEN)  run            $(NC)Run the application"
+	@echo "$(GREEN)  deps           $(NC)Install dependencies"
+	@echo "$(GREEN)  test           $(NC)Run tests"
+	@echo "$(GREEN)  test-coverage  $(NC)Run tests with coverage report"
+	@echo "$(GREEN)  fmt            $(NC)Format code"
+	@echo "$(GREEN)  lint           $(NC)Run linter"
+	@echo "$(GREEN)  vet            $(NC)Run go vet"
+	@echo "$(GREEN)  clean          $(NC)Clean build artifacts"
+	@echo "$(GREEN)  install        $(NC)Install the binary"
+	@echo "$(GREEN)  dev            $(NC)Development setup (deps, fmt, vet, test)"
+	@echo "$(GREEN)  dev-run        $(NC)Quick dev cycle (fmt, vet, run)"
+	@echo "$(GREEN)  build-run      $(NC)Build and run in one command"
+	@echo "$(GREEN)  install-lint   $(NC)Install golangci-lint if not present"
+	@echo "$(GREEN)  dev-hot        $(NC)Run with hot reload (requires air)"
+	@echo "$(GREEN)  build-all      $(NC)Build for multiple platforms"
