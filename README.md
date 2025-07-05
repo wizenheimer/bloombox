@@ -29,6 +29,40 @@ A email validation using cuckoo filters (optionally maps)
 go mod download
 ```
 
+## Data Files
+
+The service includes several pre-configured data files in the `/data` directory for various validation purposes:
+
+### Available Data Files
+
+| File             | Size  | Domains | Description                                         |
+| ---------------- | ----- | ------- | --------------------------------------------------- |
+| `disposable.txt` | 51KB  | 4,020   | Disposable email domains (temporary email services) |
+| `free.txt`       | 117KB | 8,766   | Free email provider domains (Gmail, Yahoo, etc.)    |
+| `hubspot.txt`    | 70KB  | 4,769   | Non-company domains (personal email domains)        |
+| `skiplist.txt`   | 124KB | 9,273   | Merged list of free and hubspot domains             |
+
+### Data File Usage
+
+These files are used by the corresponding validators:
+
+- **`disposable.txt`** → `disposable` validator
+- **`free.txt`** → `free` validator
+- **`hubspot.txt`** → Can be used for `blacklist_domains` validator
+- **`skiplist.txt`** → Comprehensive blacklist for `blacklist_domains` validator
+
+### Configuration
+
+To use these data files, set the appropriate environment variables:
+
+```bash
+export DISPOSABLE_EMAILS_FILE=data/disposable.txt
+export FREE_EMAILS_FILE=data/free.txt
+export BLACKLIST_DOMAINS_FILE=data/skiplist.txt
+```
+
+The files contain one domain per line and are automatically loaded when the corresponding validators are enabled.
+
 ## Usage
 
 ### Start the server
