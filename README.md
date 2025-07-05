@@ -10,7 +10,7 @@ A free, open-source email validation API made for Indie Hackers — no auth, no 
   - **Syntax validation** - RFC 5322 compliant email format checking
   - **MX record validation** - DNS MX record verification
   - **SMTP validation** - Real-time mailbox verification
-  - **Disposable email detection** - Blocks temporary email services
+- **Disposable email detection** - Blocks temporary email services
   - **Free email provider detection** - Identifies free email domains
   - **Role-based email detection** - Blocks generic role emails (admin@, info@, etc.)
   - **Banned words filtering** - Custom word blacklist in email usernames
@@ -66,6 +66,8 @@ The files contain one domain per line and are automatically loaded when the corr
 ## Usage
 
 ### Start the server
+
+> **Note:** SMTP validation may require rotating proxies to avoid being flagged by upstream mail servers. Some providers may block repeated validation attempts from the same IP address.
 
 ```bash
 go run cmd/server/main.go
