@@ -1,6 +1,6 @@
 # Bloombox
 
-A email validation using cuckoo filters (optionally maps)
+A free, open-source email validation API made for Indie Hackers — no auth, no limits, no paywalls, no data stored. Just fast, accurate checks for syntax, domains, MX records, and throwaways. Refreshed daily.
 
 ## Features
 
@@ -196,18 +196,18 @@ export VALIDATION_TIMEOUT=10s
 
 ## Available Validators
 
-| Validator           | Description                         | Requires File | Default     |
-| ------------------- | ----------------------------------- | ------------- | ----------- |
-| `syntax`            | RFC 5322 email format validation    | No            | ✅ Enabled  |
-| `mx`                | DNS MX record verification          | No            | ❌ Disabled |
-| `smtp`              | Real-time SMTP mailbox verification | No            | ❌ Disabled |
-| `disposable`        | Disposable email provider detection | Yes           | ❌ Disabled |
-| `free`              | Free email provider detection       | Yes           | ❌ Disabled |
-| `role`              | Role-based email detection          | Yes           | ❌ Disabled |
-| `banwords`          | Banned words in email username      | Yes           | ❌ Disabled |
-| `blacklist_emails`  | Blacklisted email addresses         | Yes           | ❌ Disabled |
-| `blacklist_domains` | Blacklisted domains                 | Yes           | ❌ Disabled |
-| `gravatar`          | Gravatar account existence check    | No            | ❌ Disabled |
+| Validator           | Description                         | Requires File | Default  |
+| ------------------- | ----------------------------------- | ------------- | -------- |
+| `syntax`            | RFC 5322 email format validation    | No            | Enabled  |
+| `mx`                | DNS MX record verification          | No            | Disabled |
+| `smtp`              | Real-time SMTP mailbox verification | No            | Disabled |
+| `disposable`        | Disposable email provider detection | Yes           | Disabled |
+| `free`              | Free email provider detection       | Yes           | Disabled |
+| `role`              | Role-based email detection          | Yes           | Disabled |
+| `banwords`          | Banned words in email username      | Yes           | Disabled |
+| `blacklist_emails`  | Blacklisted email addresses         | Yes           | Disabled |
+| `blacklist_domains` | Blacklisted domains                 | Yes           | Disabled |
+| `gravatar`          | Gravatar account existence check    | No            | Disabled |
 
 ## Build
 
